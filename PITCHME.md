@@ -68,6 +68,48 @@ running docker-worker tasks if there was already a known one that succeeded.
 
 ---
 
-Or is it?
+# Testing Locally
+
+```shell
+$ ./mach taskgraph --help
+usage: mach [global arguments] taskgraph subcommand [subcommand arguments]
+
+The taskgraph subcommands all relate to the generation of task graphs
+for Gecko continuous integration.  A task graph is a set of tasks linked
+by dependencies: for example, a binary must be built before it is tested,
+and that build may further depend on various toolchains, libraries, etc.
+
+Global Arguments:
+  -v, --verbose         Print verbose output.
+  -l FILENAME, --log-file FILENAME
+                        Filename to write log data to.
+  --log-interval        Prefix log line with interval from last message rather
+                        than relative time. Note that this is NOT execution
+                        time if there are parallel operations.
+  --log-no-times        Do not prefix log lines with times. By default, mach
+                        will prefix each output line with the time since
+                        command start.
+  -h, --help            Show this help message.
+  --debug-command       Start a Python debugger when command is dispatched.
+  --settings FILENAME   Path to settings file.
+
+Sub Commands:
+  action-callback       Run action callback used by action tasks
+  action-task           Run the add-tasks task. DEPRECATED! Use 'add-tasks'
+                        instead.
+  add-talos             Run the add-talos task
+  add-tasks             Run the add-tasks task
+  backfill              Run the backfill task
+  cron                  Run the cron task
+  decision              Run the decision task
+  full                  Show the full taskgraph
+  morphed               Show the morphed taskgraph
+  optimized             Show the optimized taskgraph
+  target                Show the target task set
+  target-graph          Show the target taskgraph
+  tasks                 Show all tasks in the taskgraph
+  test-action-callback  Run an action callback in a testing mode
+```
+
 
 ---
