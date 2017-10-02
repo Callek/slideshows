@@ -68,7 +68,7 @@ running docker-worker tasks if there was already a known one that succeeded.
 
 ---
 
-# Testing Locally
+### Testing Locally
 
 +++
 
@@ -158,6 +158,7 @@ Sub Command Arguments:
 
 @[1](Help output for the full graph)
 @[24-26](Parameters file, can be grabbed from an existing decision task)
-@[29](all subtasks mentioned here have a json option, to get the finer details
-of the state of the taskgraph)
+@[29](all subtasks mentioned here have a json option, to get the finer details of the state of the taskgraph)
+@[1](Replace 'full' with another graph step discussed to test other parts)
+
 ---
