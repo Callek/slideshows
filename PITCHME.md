@@ -221,4 +221,6 @@ jobs-from:
 
 @[5](loader definition)
 @[7-8](kind-dependencies)
-@[9-16](transforms)
+@[9-16](transforms processed in order)
+@[10]
+@[11]
