@@ -8,15 +8,15 @@
 
 ## Where we'll go..
 
- - What are the stages of taskgraph generation |
+ - What are the stages of taskgraph generation
    - and how can you test them locally |
- - What are and how do I work with 'transforms'
+ - What are and how do I work with 'transforms' |
 
 ---
 
 - Taskgraph is...
 - Like a grocery store.. |
-- Yes Really...
+- Yes Really... |
 
 +++
 
