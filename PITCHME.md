@@ -113,6 +113,10 @@ Sub Commands:
   test-action-callback  Run an action callback in a testing mode
 ```
 @[1](Call mach taskgraph)
-@[28](full)
+@[24](We're only using a few sub-tasks for our testing)
+@[32](full)
+@[35](target)
+@[34](optimized)
+@[33](morphed)
 
 ---
