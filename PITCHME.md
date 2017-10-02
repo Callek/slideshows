@@ -178,3 +178,47 @@ Sub Command Arguments:
 @[1](Replace 'full' with another graph step discussed to test other parts)
 
 ---
+
+### Taskgraph Generation
+
++++
+
+### Loading
+
+- Kinds
+
+![Taskcluster ci folder](imgs/taskcluster_ci.png)
+
++++
+
+#### Kind.yml
+
+```yaml
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+loader: taskgraph.loader.transform:loader
+
+kind-dependencies:
+   - toolchain
+
+transforms:
+   - taskgraph.transforms.build:transforms
+   - taskgraph.transforms.build_attrs:transforms
+   - taskgraph.transforms.build_lints:transforms
+   - taskgraph.transforms.use_toolchains:transforms
+   - taskgraph.transforms.job:transforms
+   - taskgraph.transforms.task:transforms
+
+jobs-from:
+    - android.yml
+    - android-stuff.yml
+    - linux.yml
+    - macosx.yml
+    - windows.yml
+```
+
+@[4](loader definition)
+@[6-7](kind-dependencies)
+@[8-15](transforms)
