@@ -245,6 +245,8 @@ jobs-from:
 
 +++?code=source_files/taskcluster_taskgraph_transforms_build.py&lang=python
 
+### Transform Structure
+
 @[0](Using a real file taskcluster/taskgraph/transforms/build.py)
 @[9,11,14](Boilerplate)
 @[17](transforms.add decorator, adds the function to list of transforms)
@@ -255,3 +257,6 @@ jobs-from:
 @[44-45](The second transform in this file runs next)
 @[50,56](Transforms are implemented as generators, so iterate over the list of tasks)
 
++++
+
+### Job Schemas
