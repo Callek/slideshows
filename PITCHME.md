@@ -34,8 +34,8 @@ Lets go into those in a bit more detail.
 
 *Full* task set:
 
-- In the grocery store you have available to you everything you are able to buy. |
-- In the taskgraph the full graph is similar, where all tasks you could possibly run
+ - In the grocery store you have available to you everything you are able to buy. |
+ - In the taskgraph the full graph is similar, where all tasks you could possibly run
 are generated and represented at the end of this stage. |
 
 The taskgraph fills the shelves in the *full* stage.
@@ -44,12 +44,12 @@ The taskgraph fills the shelves in the *full* stage.
 
 *Target* task set:
 
-- When you walk into the grocery store, you usually know what you want by
+ - When you walk into the grocery store, you usually know what you want by
 having a list. The items you want are stuff you know the store to be selling. So
 you walk the aisles to pick out what you need. |
-- In the taskgraph your target set is all the tasks you explicitly want to run,
+ - In the taskgraph your target set is all the tasks you explicitly want to run,
 ignoring anything that may need to run to support them. |
--- This is most evident for try pushes (where your target set could be just a
+ -- This is most evident for try pushes (where your target set could be just a
 single test) or on Nightlies where the target set could be all android nightly tasks. |
 
 The target set must be part of the *full* taskgraph, and can be different depending
