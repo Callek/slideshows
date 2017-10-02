@@ -66,9 +66,20 @@ selected tests get run) |
 -- It will also try and avoid doing unnecessary work, for example it will avoid
 running docker-worker tasks if there was already a known one that succeeded.
 
++++
+
+*Morphed* task set:
+
+- This is the final set of what will be submitted
+- Morphing consists of minor changes to the structure of the taskgraph that does not alter its actual meaning
+  - Examples include:
+    - When too many index routes are specified to strip them off and submit indexing as a seperate task.
+    - Create a task to store mozharness (via BBB) uploads.
+
 ---
 
-### Testing Locally
+### Locally Running
+#### getting output of taskgraph stages...
 
 +++
 
