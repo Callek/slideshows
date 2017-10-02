@@ -275,6 +275,7 @@ jobs-from:
 
 - Schemas help identify error cases, usually broken transforms or task configurations.
 - They could look something like:
+
 ```shell
 Exception: In signing (u'build-signing' kind) task for u'build-android-api-16-old-id-nightly/opt':
 extra keys not allowed @ data[u'invalid_key']
