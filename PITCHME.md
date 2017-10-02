@@ -9,14 +9,14 @@
 ## Where we'll go..
 
  - What are the stages of taskgraph generation
- -- and how can you test them locally |
+   - and how can you test them locally |
  - What are and how do I work with 'transforms'
 
 ---
 
-## Taskgraph is... |
-## Like a grocery store.. |
-### Yes Really...
+- Taskgraph is...
+- Like a grocery store.. |
+- Yes Really...
 
 +++
 
@@ -35,8 +35,7 @@ Lets go into those in a bit more detail.
 *Full* task set:
 
  - In the grocery store you have available to you everything you are able to buy. |
- - In the taskgraph the full graph is similar, where all tasks you could possibly run
-are generated and represented at the end of this stage. |
+ - In the taskgraph the full graph is similar, where all tasks you could possibly run are generated and represented at the end of this stage. |
 
 The taskgraph fills the shelves in the *full* stage.
 
@@ -65,6 +64,12 @@ but you think you have some at home already, so you omit buying it. |
 selected tests get run) |
 -- It will also try and avoid doing unnecessary work, for example it will avoid
 running docker-worker tasks if there was already a known one that succeeded.
+
+Notes:
+ - When you are in the grocery store, after you pick up the cake mix, you see that
+   you need to buy eggs and frosting for your cake. So you pick those up as well, even
+   though they were not on your shopping list. You also realize it called for buttermilk,
+   but you think you have some at home already, so you omit buying it.
 
 +++
 
