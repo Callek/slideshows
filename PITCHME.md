@@ -221,6 +221,29 @@ jobs-from:
 
 @[5](loader definition)
 @[7-8](kind-dependencies)
-@[9-16](transforms processed in order)
-@[10]
+@[10-16](transforms processed in order)
 @[11]
+@[12]
+@[13]
+@[14]
+@[15]
+@[16]
+@[18-25](any other keys in the kind.yml are loader specific)
+
++++
+
+##### Notes about loaders
+
+- kind-dependencies only determine the order of the kinds loading.
+  - no direct bearing on the task dependencies generated.
+- transforms evaluate one at a time, in order, based on the configuration supplied by the kind.yml and the loader function
+- before the loader for the next kind being loaded is called, all tasks for the prior kinds are defined in the full graph
+
+---
+
+### Transform Structure
+
++++?code=source_files/taskcluster_taskgraph_transforms_build.py
+
+@[18](test)
+
