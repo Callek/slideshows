@@ -243,7 +243,15 @@ jobs-from:
 
 ### Transform Structure
 
-+++?code=source_files/taskcluster_taskgraph_transforms_build.py
++++?code=source_files/taskcluster_taskgraph_transforms_build.py&lang=python
 
-@[18](test)
+@[0](Using a real file taskcluster/taskgraph/transforms/build.py)
+@[9,11,14](Boilerplate)
+@[17](transforms.add decorator, adds the function to list of transforms)
+@[18](First transform in file)
+@[18](Transforms are given a config which has access to the kind config and parameters)
+@[18](And a set of jobs/tasks to iterate over and perform, ahem, transforms, on)
+@[19](It is best practice to have a docstring)
+@[35](The second transform in this file runs next)
+@[35](Transforms are implemented as generators, so iterate over the list of tasks)
 
