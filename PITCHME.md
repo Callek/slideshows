@@ -113,7 +113,7 @@ Sub Commands:
   test-action-callback  Run an action callback in a testing mode
 ```
 @[1](Call mach taskgraph)
-@[23](We're only using a few sub-tasks for our testing)
+@[23,32,33,34,35](We're only using a few sub-tasks for our testing here)
 @[32](full)
 @[35](target)
 @[34](optimized)
@@ -157,6 +157,7 @@ Sub Command Arguments:
 ```
 
 @[1](Help output for the full graph)
-@[20](..)
-
+@[24-26](Parameters file, can be grabbed from an existing decision task)
+@[29](all subtasks mentioned here have a json option, to get the finer details
+of the state of the taskgraph)
 ---
