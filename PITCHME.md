@@ -113,10 +113,50 @@ Sub Commands:
   test-action-callback  Run an action callback in a testing mode
 ```
 @[1](Call mach taskgraph)
-@[24](We're only using a few sub-tasks for our testing)
+@[23](We're only using a few sub-tasks for our testing)
 @[32](full)
 @[35](target)
 @[34](optimized)
 @[33](morphed)
+
++++
+
+```shell
+$ ./mach taskgraph full --help
+usage: mach [global arguments] taskgraph full [command arguments]
+
+Global Arguments:
+  -v, --verbose         Print verbose output.
+  -l FILENAME, --log-file FILENAME
+                        Filename to write log data to.
+  --log-interval        Prefix log line with interval from last message rather
+                        than relative time. Note that this is NOT execution
+                        time if there are parallel operations.
+  --log-no-times        Do not prefix log lines with times. By default, mach
+                        will prefix each output line with the time since
+                        command start.
+  -h, --help            Show this help message.
+  --debug-command       Start a Python debugger when command is dispatched.
+  --settings FILENAME   Path to settings file.
+
+Sub Command Arguments:
+  --tasks-regex TASKS_REGEX, --tasks TASKS_REGEX
+                        only return tasks with labels matching this regular
+                        expression.
+  --no-optimize         do not remove tasks from the graph that are found in
+                        the index (a.k.a. optimize the graph)
+  --parameters PARAMETERS, -p PARAMETERS
+                        parameters file (.yml or .json; see
+                        `taskcluster/docs/parameters.rst`)`
+  --labels, -L          Output the label for each task in the task graph
+                        (default)
+  --json, -J            Output task graph as a JSON object
+  --verbose, -v         include debug-level logging output
+  --quiet, -q           suppress all logging output
+  --root ROOT, -r ROOT  root of the taskgraph definition relative to topsrcdir
+```
+
+@[1](Help output for the full graph)
+@[20](..)
 
 ---
