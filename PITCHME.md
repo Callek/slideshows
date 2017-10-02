@@ -191,7 +191,7 @@ Sub Command Arguments:
 
 +++
 
-#### Kind.yml
+#### taskcluster/ci/build/kind.yml
 
 ```yaml
 # This Source Code Form is subject to the terms of the Mozilla Public
@@ -219,6 +219,6 @@ jobs-from:
     - windows.yml
 ```
 
-@[4](loader definition)
-@[6-7](kind-dependencies)
-@[8-15](transforms)
+@[5](loader definition)
+@[7-8](kind-dependencies)
+@[9-16](transforms)
