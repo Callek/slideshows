@@ -245,8 +245,6 @@ jobs-from:
 
 +++?code=source_files/taskcluster_taskgraph_transforms_build.py&lang=python
 
-### Transform Structure
-
 @[0](Using a real file taskcluster/taskgraph/transforms/build.py)
 @[9,11,14](Boilerplate)
 @[17](transforms.add decorator, adds the function to list of transforms)
@@ -259,4 +257,14 @@ jobs-from:
 
 +++
 
-### Job Schemas
+### Schemas
+
+- Help enforce known-configurations throughout a tasks journey through transforms
+- The can be defined as needed in new transforms, and are meant to assist in sane option passing
+
++++?code=source_files/taskcluster_taskgraph_transforms_signing.py&lang=python
+
+@[0](Using a real file taskcluster/taskgraph/transforms/signing.py)
+@[15](For schema validation we use the voluptuous package)
+@[29-62](First we define the schema)
+@[65-71](Then validate it via a transform, ensuring that any task definitions passed in validate here)
