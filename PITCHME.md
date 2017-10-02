@@ -23,8 +23,8 @@
 Suppose you want to make a meal, including baking a cake, so you want to go to
 the grocery store.
 
- - The stores contents, itself, is your *full* taskgraph. |
- - Your shopping list (including: cake mix) is considered your *target* tasks |
+ - The stores contents, itself, is your 'full' taskgraph. |
+ - Your shopping list (including: cake mix) is considered your 'target' tasks |
  - The items you bring up to the register is your *optimized* task list. |
  - Any substitutions you make at home, would be your final task list ('morphed') |
 
