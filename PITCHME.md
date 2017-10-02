@@ -112,6 +112,7 @@ Sub Commands:
   tasks                 Show all tasks in the taskgraph
   test-action-callback  Run an action callback in a testing mode
 ```
-
+@[1](Call mach taskgraph)
+@[28](full)
 
 ---
