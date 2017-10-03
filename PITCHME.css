@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
 
-* {
-    font-family: 'Zilla Slab', serif !important;
-}
-
 p#notification.footer-fade {
     text-align: left;
+    font-family: 'Zilla Slab', serif;
 }
 
 p#notification.footer-fade b {
     font-size: 110%;
+    font-family: 'Zilla Slab', serif;
 }
