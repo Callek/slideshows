@@ -47,11 +47,16 @@ the grocery store.
  - You enter the store with a shopping list, knowing that the store sells everything on it. |
    - You walk the aisles and pick up the items on your list.
  - Again in the taskgraph, the target set is the tasks you explicitly want to run. |
-   - This is most evident for try pushes (where your target set could be just a single test) or on Nightlies where the target set could be all android nightly tasks. |
+   - This is most evident for try pushes (e.g. just a single test) or for Nightlies where the target set may be all android nightly tasks. |
+ - The target set must always be a subset of the full taskgraph |
+ - The target set may alter based on repo metadata, e.g.: |
+   - Project |
+   - Set of files changed |
+   - If the decision task is run via cron (via target task method) |
 
-<span class="fragment">The target set must be part of the *full* taskgraph, and can be different depending
-on what files were changed in 'this' push, and what is being run (nightly, valgrind,
-etc), as well as could vary by project.</span>
+<span class="fragment">Tasks in the target set will always be a subset of the *full*
+taskgraph, this set may vary based on push metadata (e.g. what files changed), if
+the target selection method changes (varies for crons) or by repo.</span>
 
 +++
 
