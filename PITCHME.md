@@ -31,7 +31,6 @@ the grocery store.
 <span class="fragment">Lets go into those in a bit more detail.</span>
 
 +++
-
 #### 'Full' task set:
 
  - In the grocery store, all the items on the shelves are available to buy. |
@@ -41,7 +40,6 @@ the grocery store.
 <span class="fragment">The taskgraph fills the shelves in the 'full' stage.</span>
 
 +++
-
 #### 'Target' task set:
 
  - You enter the store with a shopping list, knowing that the store sells everything on it. |
