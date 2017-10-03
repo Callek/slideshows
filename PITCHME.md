@@ -70,11 +70,9 @@ the grocery store.
 #### 'Optimized' task set:
 
 - The optimized task set works similarly. |
-  - It will make sure all its dependencies are selected (builds needed for the
-selected tests get run) |
+  - It will make sure all its dependencies are selected (builds needed for the selected tests get run) |
     - In the grocery example this was the eggs. |
-  - It will also try and avoid doing unnecessary work, for example it will avoid
-running docker-worker tasks if there was already a known one that succeeded. |
+  - It will also try and avoid doing unnecessary work, for example it will avoid running docker-worker tasks if there was already a known one that succeeded. |
     - In the grocery example this was the frosting. |
 
 Note:
