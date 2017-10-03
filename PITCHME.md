@@ -54,12 +54,12 @@ the grocery store.
    - e.g.: |
      - Project |
      - Set of files changed |
-     - If the decision task is run via cron (via target task method) |
+     - If the decision task is run via cron (using a target task method) |
 
 +++
 #### _Optimized_ task set:
 
-- After you grab the cake mix, you look at its ingredients list: |
+- After you grab the cake mix, you look at its list of stuff you need: |
   - Eggs |
   - Frosting |
   - Buttermilk |
@@ -88,7 +88,7 @@ Note:
 - This is the final set of what will be submitted |
 - Morphing consists of minor changes to the structure of the taskgraph that does not alter its actual meaning |
   - Examples include: |
-    - When too many index routes are specified to strip them off and submit indexing as a seperate task. |
+    - When too many index routes are specified, morphs strip them off and submit indexing as a seperate task. |
     - Create a task to store mozharness (via BBB) uploads. |
 
 ---
@@ -275,14 +275,16 @@ jobs-from:
 
 ### Schemas
 
-- Help enforce known-configurations during a tasks journey through transforms
-- They can be defined as needed in new transforms, and are meant to assist in sane option passing
+- Help enforce known-configurations during a tasks journey through transforms |
+- They can be defined as needed in new transforms, and are meant to assist in sane option passing |
 
 +++?code=source_files/taskcluster_taskgraph_transforms_signing.py&lang=python
 
 @[0](Using a real file taskcluster/taskgraph/transforms/signing.py)
 @[15](For schema validation we use the voluptuous package)
-@[29-35](First we define the schema)
+@[12](We import the Schema definition from _taskgraph.util.schema_ which is extended from voluptuous)
+@[12](This enforces some style consistency in the schemas)
+@[29-35](We define the schema)
 @[65-71](Then validate it via a transform, ensuring that any task definitions passed in, validate here)
 
 +++
@@ -323,7 +325,7 @@ extra keys not allowed @ data[u'invalid_key']
 ### Dependencies
 
 - The taskgraph takes dependency information by a dict with task labels as values. |
-  - The keys to the dictionary are arbitrary but relevant for the optimization phase
+  - The keys to the dictionary are arbitrary but relevant for the optimization phase |
 
 +++
 
@@ -338,16 +340,17 @@ $ jq '{"dependencies": .["build-signing-win64/opt"]["dependencies"]}' < ../tasks
   }
 }
 ```
-@[0](In this example _build-win64/opt_ is a dependency)
-@[0](We'll talk about what the key, _build_, can be used for, next)
+@[0](In this example, we look at the _build-signing-win64/opt_ task)
+@[5](_build-win64/opt_ is the dependency)
+@[5](We'll talk about what the key, _build_, can be used for, next)
 
 +++
 
 ### Task-Reference
 
-- In the taskgraph, there is sometimes the need to reference a previously run task by taskID |
+- In the taskgraph, there is sometimes the need to reference another defined task by taskID |
   - E.g. to give an artifact URL in the environment |
-- This magic syntax is used by the magic dictionary ```{"task-reference": "some string <key>"}``` </li> |
+- This syntax is defined by the dictionary ```{"task-reference": "some string <key>"}``` </li> |
   - The key here corresponds to the key used in the dependency, and can appear anywhere in the string. |
 
 +++

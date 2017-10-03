@@ -1,2 +1,5 @@
 theme: sky
 logo: imgs/small_squirrel.png
+highlight: tomorrow-night-bright
+slide-number: true
+footnote: <span style='background-color:grey;padding:0.2em;'>PUBLIC</span> <img src='imgs/small_squirrel.png'>"
