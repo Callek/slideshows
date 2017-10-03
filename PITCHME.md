@@ -32,7 +32,7 @@ the grocery store.
 
 +++
 
-'Full' task set:
+#### 'Full' task set:
 
  - In the grocery store, all the items on the shelves are available to buy. |
  - In the taskgraph the full graph is similar |
@@ -42,7 +42,7 @@ the grocery store.
 
 +++
 
-'Target' task set:
+#### 'Target' task set:
 
  - You enter the store with a shopping list, knowing that the store sells everything on it. |
    - You walk the aisles and pick up the items on your list.
@@ -52,10 +52,6 @@ the grocery store.
    - Project |
    - Set of files changed |
    - If the decision task is run via cron (via target task method) |
-
-<span class="fragment">Tasks in the target set will always be a subset of the *full*
-taskgraph, this set may vary based on push metadata (e.g. what files changed), if
-the target selection method changes (varies for crons) or by repo.</span>
 
 +++
 
