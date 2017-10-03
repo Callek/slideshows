@@ -325,6 +325,7 @@ extra keys not allowed @ data[u'invalid_key']
   - The keys to the dictionary are arbitrary but relevant for the optimization phase
 
 <div class="fragment">
+
 ```shell
 $./mach taskgraph full -p ../parameters-central.yml --json > ../tasks.json
 $ jq '{"dependencies": .["build-signing-win64/opt"]["dependencies"]}' < ../tasks.json
@@ -334,6 +335,7 @@ $ jq '{"dependencies": .["build-signing-win64/opt"]["dependencies"]}' < ../tasks
   }
 }
 ```
+
 </div>
 
 +++
