@@ -44,15 +44,14 @@ the grocery store.
 
 'Target' task set:
 
- - When you walk into the grocery store, you usually know what you want by having a list. The items you want are stuff you know the store to be selling. So you walk the aisles to pick out what you need. |
  - You enter the store with a shopping list, knowing that the store sells everything on it. |
    - You walk the aisles and pick up the items on your list.
- - In the taskgraph your target set is all the tasks you explicitly want to run, ignoring anything that may need to run to support them. |
+ - Again in the taskgraph, the target set is the tasks you explicitly want to run. |
    - This is most evident for try pushes (where your target set could be just a single test) or on Nightlies where the target set could be all android nightly tasks. |
 
-The target set must be part of the *full* taskgraph, and can be different depending
+<span class="fragment">The target set must be part of the *full* taskgraph, and can be different depending
 on what files were changed in 'this' push, and what is being run (nightly, valgrind,
-etc), as well as could vary by project.
+etc), as well as could vary by project.</span>
 
 +++
 
