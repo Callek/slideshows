@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab:400,600,700');
 
 p#notification.footer-fade {
     text-align: left;
@@ -7,5 +7,6 @@ p#notification.footer-fade {
 
 p#notification.footer-fade b {
     font-size: 110%;
+    font-weight: 800;
     font-family: 'Zilla Slab', serif !important;
 }
