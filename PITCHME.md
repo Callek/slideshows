@@ -32,16 +32,17 @@ the grocery store.
 
 +++
 
-'Full* task set:
+'Full' task set:
 
  - In the grocery store you have available to you everything you are able to buy. |
- - In the taskgraph the full graph is similar, where all tasks you could possibly run are generated and represented at the end of this stage. |
+ - In the taskgraph the full graph is similar |
+   - all tasks you could possibly run are generated and represented |
 
-The taskgraph fills the shelves in the *full* stage.
+<span class="fragment">The taskgraph fills the shelves in the 'full' stage.</span>
 
 +++
 
-*Target* task set:
+'Target' task set:
 
  - When you walk into the grocery store, you usually know what you want by having a list. The items you want are stuff you know the store to be selling. So you walk the aisles to pick out what you need. |
  - In the taskgraph your target set is all the tasks you explicitly want to run, ignoring anything that may need to run to support them. |
