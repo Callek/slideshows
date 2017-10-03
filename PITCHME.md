@@ -324,7 +324,9 @@ extra keys not allowed @ data[u'invalid_key']
 - The taskgraph takes dependency information by a dict with task labels as values. |
   - The keys to the dictionary are arbitrary but relevant for the optimization phase
 
-<div class="fragment">
++++
+
+### Dependencies
 
 ```shell
 $./mach taskgraph full -p ../parameters-central.yml --json > ../tasks.json
@@ -335,8 +337,8 @@ $ jq '{"dependencies": .["build-signing-win64/opt"]["dependencies"]}' < ../tasks
   }
 }
 ```
-
-</div>
+@[0](In this example 'build-win64/opt' is a dependency)
+@[0](We'll talk about what 'build' (the dependency key) can be used for, next)
 
 +++
 
