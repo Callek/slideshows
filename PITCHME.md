@@ -47,7 +47,6 @@ the grocery store.
  - You enter the store with a shopping list, knowing that the store sells everything on it. |
    - You walk the aisles and pick up the items on your list.
  - Again in the taskgraph, the target set is the tasks you explicitly want to run. |
-   - This is most evident for try pushes (e.g. just a single test) or for Nightlies where the target set may be all android nightly tasks. |
  - The target set must always be a subset of the full taskgraph |
  - The target set may alter based on repo metadata, e.g.: |
    - Project |
