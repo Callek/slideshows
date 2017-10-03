@@ -398,7 +398,7 @@ $ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "t
 - Since transforms execute in order, there are a variety of local debugging options
   - PDB ```import pdb;pdb.set_trace()``` </li> |
   - print debugging |
-  - Repeated runs with output directed somewhere. |
+  - Repeated runs with json output directed somewhere. |
   - Many more options |
 - To validate dependencies when making changes, run the _optimize_ step with an appropriate taskgraph before completing. </li> |
   - This ensures that the dependency links and any _task-references_ are valid </li> |
@@ -409,7 +409,7 @@ $ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "t
 
 - Repeat Slides: http://tinyurl.com/ybck99ku
   - https://gitpitch.com/Callek/slideshows/transforms_2017#/
-- [https://firefox-source-docs.mozilla.org/taskcluster/taskcluster/index.html](Taskcluster's Firefox Source Docs)
+- [Taskcluster's Firefox Source Docs](https://firefox-source-docs.mozilla.org/taskcluster/taskcluster/index.html)
 
 ---
 
