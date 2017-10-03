@@ -326,8 +326,9 @@ extra keys not allowed @ data[u'invalid_key']
 
 ```shell
 $./mach taskgraph full -p ../parameters-central.yml --json > ../tasks.json
+```
 
-
++++
 ###Local Debugging
 
 - Since transforms execute in order, there are a variety of local debugging options
