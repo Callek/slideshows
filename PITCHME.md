@@ -249,10 +249,10 @@ jobs-from:
 
 ##### Notes about loaders
 
-- kind-dependencies only determine the order of the kinds loading.
-  - no direct bearing on the task dependencies generated.
-- transforms evaluate one at a time, in order, based on the configuration supplied by the kind.yml and the loader function
-- before the loader for the next kind being loaded is called, all tasks for the prior kinds are defined in the full graph
+- kind-dependencies only determine the order of the kinds loading. |
+  - Has no direct bearing on the task dependencies generated. |
+- transforms evaluate one at a time, in order, based on the configuration supplied by the kind.yml with inputs from the loader function |
+- before the loader for the next kind being loaded is called, all tasks for the prior kinds are defined in the full graph |
 
 ---
 
