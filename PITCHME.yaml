@@ -2,5 +2,5 @@ theme: sky
 logo: imgs/small_squirrel.png
 highlight: tomorrow-night-bright
 slide-number: true
-footnote: "<span style='background-color:grey;padding:0.2em;color:black;font-weight:bold;margin-left:3em;'>PUBLIC</span>"
+footnote: "<span style='background-color:grey;padding:0.2em;color:black;font-weight:bold;margin-left:3em;'>PUBLIC</span> <b>MOZILLA</b>"
 theme-override : PITCHME.css

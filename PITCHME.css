@@ -7,3 +7,7 @@
 p#notification.footer-fade {
     text-align: left;
 }
+
+p#notification.footer-fade b {
+    font-size: 110%;
+}
