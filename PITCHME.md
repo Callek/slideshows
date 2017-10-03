@@ -318,7 +318,8 @@ extra keys not allowed @ data[u'invalid_key']
 @[3-30](Followed by a dump of the json of the currently evaluated job definition)
 
 +++
-###Dependencies
+
+### Dependencies
 
 - The taskgraph takes dependency information by a dict with task labels as values. |
   - The keys to the dictionary are arbitrary but relevant for the optimization phase
@@ -329,7 +330,8 @@ $./mach taskgraph full -p ../parameters-central.yml --json > ../tasks.json
 ```
 
 +++
-###Local Debugging
+
+### Local Debugging
 
 - Since transforms execute in order, there are a variety of local debugging options
   - PDB ```import pdb;pdb.set_trace()```
