@@ -262,7 +262,7 @@ jobs-from:
 
 @[0](Using a real file taskcluster/taskgraph/transforms/build.py)
 @[9,11,14](Boilerplate)
-@[17](transforms.add decorator, adds the function to list of transforms)
+@[17](@transforms.add decorator, adds the function to list of transforms)
 @[18](First transform in file)
 @[18](Transforms are given a config which has access to the kind config and parameters)
 @[18](And a set of jobs/tasks to iterate over and perform, ahem, transforms, on)
@@ -274,15 +274,15 @@ jobs-from:
 
 ### Schemas
 
-- Help enforce known-configurations throughout a tasks journey through transforms
-- The can be defined as needed in new transforms, and are meant to assist in sane option passing
+- Help enforce known-configurations during a tasks journey through transforms
+- They can be defined as needed in new transforms, and are meant to assist in sane option passing
 
 +++?code=source_files/taskcluster_taskgraph_transforms_signing.py&lang=python
 
 @[0](Using a real file taskcluster/taskgraph/transforms/signing.py)
 @[15](For schema validation we use the voluptuous package)
 @[29-35](First we define the schema)
-@[65-71](Then validate it via a transform, ensuring that any task definitions passed in validate here)
+@[65-71](Then validate it via a transform, ensuring that any task definitions passed in, validate here)
 
 +++
 
@@ -316,3 +316,21 @@ extra keys not allowed @ data[u'invalid_key']
 @[1](The exception itself)
 @[2](Informative message about why its invalid)
 @[3-30](Followed by a dump of the json of the currently evaluated job definition)
+
++++
+###Dependencies
+
+- The taskgraph takes dependency information by a dict with task labels as values. |
+  - The keys to the dictionary are arbitrary but relevant for the optimization phase
+- ```task-reference```
+
+```shell
+$./mach taskgraph full -p ../parameters-central.yml --json > ../tasks.json
+
+
+###Local Debugging
+
+- Since transforms execute in order, there are a variety of local debugging options
+  - PDB ```import pdb;pdb.set_trace()```
+  - print debugging
+  - 
