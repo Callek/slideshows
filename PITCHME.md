@@ -45,6 +45,10 @@ the grocery store.
  - You enter the store with a shopping list, knowing that the store sells everything on it. |
    - You walk the aisles and pick up the items on your list.
  - Again in the taskgraph, the target set is the tasks you explicitly want to run. |
+
++++
+#### 'Target' task set:
+
  - The target set must always be a subset of the full taskgraph |
  - The target set may alter based on repo metadata, e.g.: |
    - Project |
