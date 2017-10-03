@@ -382,7 +382,7 @@ $ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "t
 ### Local Debugging
 
 - Since transforms execute in order, there are a variety of local debugging options
-  - PDB ```import pdb;pdb.set_trace()``` |
+  - PDB ```import pdb;pdb.set_trace()``` </li> |
   - print debugging |
   - Repeated runs with output directed somewhere. |
   - Many more options |
