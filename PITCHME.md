@@ -28,7 +28,7 @@ the grocery store.
  - The items you bring up to the register is your 'optimized' task list. |
  - Any substitutions you make at home, would be your final task list ('morphed') |
 
-<span class="fragment">Lets go into those in a bit more detail.</span>
+<span class="fragment"><b>Lets go into those in a bit more detail.</b></span>
 
 +++
 #### 'Full' task set:
@@ -43,7 +43,7 @@ the grocery store.
 #### 'Target' task set:
 
  - You enter the store with a shopping list, knowing that the store sells everything on it. |
-   - You walk the aisles and pick up the items on your list.
+   - You walk the aisles and pick up the items on your list. (One of these items is "Cake Mix")
  - Again in the taskgraph, the target set is the tasks you explicitly want to run. |
 
 +++
@@ -56,28 +56,35 @@ the grocery store.
    - If the decision task is run via cron (via target task method) |
 
 +++
+#### 'Optimized' task set:
 
-*Optimized* task set:
+- After you grab the cake mix, you look at its ingredients list: |
+  - Eggs |
+  - Frosting |
+  - Buttermilk |
+- You have frosting at home, from the last time you shopped. |
+- You add Eggs to your list and go grab some. |
+- You think you have buttermilk at home so you don't worry about it. |
 
-- When you are in the grocery store, after you pick up the cake mix, you see that
-you need to buy eggs and frosting for your cake. So you pick those up as well, even
-though they were not on your shopping list. You also realize it called for buttermilk,
-but you think you have some at home already, so you omit buying it. |
++++
+#### 'Optimized' task set:
+
 - The optimized task set works similarly. |
--- It will make sure all its dependencies are selected (builds needed for the
+  - It will make sure all its dependencies are selected (builds needed for the
 selected tests get run) |
--- It will also try and avoid doing unnecessary work, for example it will avoid
-running docker-worker tasks if there was already a known one that succeeded.
+    - In the grocery example this was the eggs. |
+  - It will also try and avoid doing unnecessary work, for example it will avoid
+running docker-worker tasks if there was already a known one that succeeded. |
+    - In the grocery example this was the frosting. |
 
-Notes:
+Note:
  - When you are in the grocery store, after you pick up the cake mix, you see that
    you need to buy eggs and frosting for your cake. So you pick those up as well, even
    though they were not on your shopping list. You also realize it called for buttermilk,
    but you think you have some at home already, so you omit buying it.
 
 +++
-
-*Morphed* task set:
+#### 'Morphed' task set:
 
 - This is the final set of what will be submitted
 - Morphing consists of minor changes to the structure of the taskgraph that does not alter its actual meaning
