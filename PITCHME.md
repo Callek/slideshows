@@ -260,9 +260,9 @@ jobs-from:
 
 ##### Notes about loaders
 
-- kind-dependencies only determine the order of the kinds loading. |
+- _kind-dependencies_ only determine the order of the kinds loading. |
   - Has no direct bearing on the task dependencies generated. |
-- transforms evaluate one at a time, in order, based on the configuration supplied by the kind.yml with inputs from the loader function |
+- transforms evaluate one at a time, in order, based on the configuration supplied by the _kind.yml_ with inputs from the loader function |
 - before the loader for the next kind being loaded is called, all tasks for the prior kinds are defined in the full graph |
 
 ---
@@ -400,8 +400,8 @@ $ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "t
   - print debugging |
   - Repeated runs with output directed somewhere. |
   - Many more options |
-- To validate dependencies when making changes, run the _optimize_ step with an appropriate taskgraph before completing. |
-  - This ensures that the dependency links and any _task-references_ are valid |
+- To validate dependencies when making changes, run the _optimize_ step with an appropriate taskgraph before completing. </li> |
+  - This ensures that the dependency links and any _task-references_ are valid </li> |
 
 ---
 
