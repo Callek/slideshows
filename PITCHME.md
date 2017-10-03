@@ -4,9 +4,21 @@
 ## Releng Tech Talk
 ### Oct 2017
 
+--
+
+## Follow along?
+##### Only if you want to
+
+- Slides: http://tinyurl.com/ybck99ku
+  - https://gitpitch.com/Callek/slideshows/transforms_2017#/
+- Q&A Etherpad: http://tinyurl.com/y9al38ry
+  - https://public.etherpad-mozilla.org/p/tc_tech_talk_10_17
+- Video Recording Link TBD
+  - (will add after-the-fact)
+
 ---
 
-## Where we'll go..
+## What we will cover
 
  - What are the stages of taskgraph generation
    - and how can you test them locally |
@@ -390,6 +402,8 @@ $ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "t
   - print debugging |
   - Repeated runs with output directed somewhere. |
   - Many more options |
+- To validate dependencies when making changes, run the _optimize_ step with an appropriate taskgraph before completing. |
+  - This ensures that the dependency links and any _task-references_ are valid |
 
 ---
 
