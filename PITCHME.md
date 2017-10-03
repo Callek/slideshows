@@ -10,7 +10,7 @@
 ##### Only if you want to
 
 - Slides: http://tinyurl.com/ybck99ku
-  - https://gitpitch.com/Callek/slideshows/transforms_2017#/
+  - <small>https://gitpitch.com/Callek/slideshows/transforms_2017#/</small>
 - Q&A Etherpad: http://tinyurl.com/y9al38ry
   - https://public.etherpad-mozilla.org/p/tc_tech_talk_10_17
 - Video Recording Link TBD
