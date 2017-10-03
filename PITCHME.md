@@ -344,10 +344,10 @@ $ jq '{"dependencies": .["build-signing-win64/opt"]["dependencies"]}' < ../tasks
 
 ### Task-Reference
 
-- In the taskgraph, there is sometimes the need to reference a previously run task by taskID
-  - E.g. to give an artifact URL in the environment
-- This magic syntax is used by the magic dictionary ```{"task-reference": "some string <key>"}```
-  - The key here corresponds to the key used in the dependency, and can appear anywhere in the string.
+- In the taskgraph, there is sometimes the need to reference a previously run task by taskID |
+  - E.g. to give an artifact URL in the environment |
+- This magic syntax is used by the magic dictionary ```{"task-reference": "some string <key>"}``` |
+  - The key here corresponds to the key used in the dependency, and can appear anywhere in the string. |
 
 +++
 ### Task-Reference
