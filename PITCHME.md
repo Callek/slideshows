@@ -338,13 +338,51 @@ $ jq '{"dependencies": .["build-signing-win64/opt"]["dependencies"]}' < ../tasks
 }
 ```
 @[0](In this example 'build-win64/opt' is a dependency)
-@[0](We'll talk about what 'build' \(the dependency key\) can be used for, next)
+@[0](We'll talk about what the key, 'build', can be used for, next)
+
++++
+
+### Task-Reference
+
+- In the taskgraph, there is sometimes the need to reference a previously run task by taskID
+  - E.g. to give an artifact URL in the environment
+- This magic syntax is used by the magic dictionary ```{"task-reference": "some string <key>"}```
+  - The key here corresponds to the key used in the dependency, and can appear anywhere in the string.
+
++++
+### Task-Reference
+
+```shell
+$ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "task": {"payload": {"env": {"EN_US_BINARY_URL": .["nightly-l10n-win64-nightly-1/opt"]["task"]["payload"]["env"]["EN_US_BINARY_URL"]}}}}' < ../tasks.json
+{
+  "dependencies": {
+    "repackage-signed": "repackage-signing-win64-nightly/opt",
+    "signed-build": "build-signing-win64-nightly/opt",
+    "unsigned-build": "build-win64-nightly/opt"
+  },
+  "task": {
+    "payload": {
+      "env": {
+        "EN_US_BINARY_URL": {
+          "task-reference": "https://queue.taskcluster.net/v1/task/<signed-build>/artifacts/public/build"
+        }
+      }
+    }
+  }
+}
+```
+@[0](This is a minimized look at the full output of the nightly-l10n-win64-nightly-1/opt task)
+@[0](Showing both the dependencies and one specific environment var using the task-reference information)
+@[11-13](This task-reference is using the dependency key 'signed-build')
+@[12](These keys against the dependency list get validated in the optimized stage, along with the labels used in task dependencies)
+@[12](This could evaluate to 'https://queue.taskcluster.net/v1/task/GT4uxctWTDqtYpUrK7CLrA/artifacts/public/build')
 
 +++
 
 ### Local Debugging
 
 - Since transforms execute in order, there are a variety of local debugging options
-  - PDB ```import pdb;pdb.set_trace()```
-  - print debugging
-  - 
+  - PDB ```import pdb;pdb.set_trace()``` |
+  - print debugging |
+  - Repeated runs with output directed somewhere. |
+  - Many more options |
