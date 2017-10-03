@@ -338,7 +338,7 @@ $ jq '{"dependencies": .["build-signing-win64/opt"]["dependencies"]}' < ../tasks
 }
 ```
 @[0](In this example 'build-win64/opt' is a dependency)
-@[0](We'll talk about what 'build' (the dependency key) can be used for, next)
+@[0](We'll talk about what 'build' \(the dependency key\) can be used for, next)
 
 +++
 
