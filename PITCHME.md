@@ -407,5 +407,13 @@ $ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "t
 
 ---
 
+## Further Reading
+
+- Repeat Slides: http://tinyurl.com/ybck99ku
+  - https://gitpitch.com/Callek/slideshows/transforms_2017#/
+- [https://firefox-source-docs.mozilla.org/taskcluster/taskcluster/index.html](Taskcluster's Firefox Source Docs)
+
+---
+
 ## Q&A
 ### http://bit.ly/...
