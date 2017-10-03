@@ -28,7 +28,7 @@ the grocery store.
  - The items you bring up to the register is your 'optimized' task list. |
  - Any substitutions you make at home, would be your final task list ('morphed') |
 
-*Lets go into those in a bit more detail.*
+<span class="fragment">Lets go into those in a bit more detail.</span>
 
 +++
 
