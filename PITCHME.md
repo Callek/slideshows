@@ -414,4 +414,4 @@ $ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "t
 ---
 
 ## Q&A
-### http://bit.ly/...
+### [http://tinyurl.com/y9al38ry](https://public.etherpad-mozilla.org/p/tc_tech_talk_10_17)
