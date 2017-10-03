@@ -2,5 +2,5 @@ theme: sky
 logo: imgs/small_squirrel.png
 highlight: tomorrow-night-bright
 slide-number: true
-footnote: "<span style='background-color:grey;padding:0.2em;color:black;font-weight:bold;margin-left:3em;'>PUBLIC</span> <img src='https://raw.githubusercontent.com/Callek/slideshows/transforms_2017/imgs/mozilla.png' size></img>"
+footnote: "<span style='background-color:grey;padding:0.2em;color:black;font-weight:bold;margin-left:3em;'>PUBLIC</span> <img src='https://raw.githubusercontent.com/Callek/slideshows/transforms_2017/imgs/mozilla.png' style='max-height:10%'></img>"
 theme-override : PITCHME.css
