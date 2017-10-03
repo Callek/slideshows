@@ -7,5 +7,5 @@ p#notification.footer-fade {
 
 p#notification.footer-fade b {
     font-size: 110%;
-    font-family: 'Zilla Slab', serif;
+    font-family: 'Zilla Slab', serif !important;
 }
