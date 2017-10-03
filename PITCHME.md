@@ -179,12 +179,18 @@ Sub Command Arguments:
   --verbose, -v         include debug-level logging output
   --quiet, -q           suppress all logging output
   --root ROOT, -r ROOT  root of the taskgraph definition relative to topsrcdir
+$
+$ ./mach taskgraph full --help
+$ ./mach taskgraph target --help
+$ ./mach taskgraph optimized --help
+$ ./mach taskgraph morphed --help
+
 ```
 
 @[1](Help output for the full graph)
 @[24-26](Parameters file, can be grabbed from an existing decision task)
 @[29](all subtasks mentioned here have a json option, to get the finer details of the state of the taskgraph)
-@[1](Replace 'full' with another graph step discussed to test other parts)
+@[34-37](Replace 'full' with another graph step discussed to test other parts)
 
 ---
 
