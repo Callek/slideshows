@@ -10,7 +10,7 @@
 
  - What are the stages of taskgraph generation
    - and how can you test them locally |
- - What are and how do I work with 'transforms' |
+ - What are and how do I work with `transforms` |
 
 ---
 
