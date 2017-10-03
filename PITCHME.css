@@ -1,3 +1,7 @@
 p#notification.footer-fade {
     text-align: left;
 }
+
+.reveal .slide-number {
+    font-size: 1em !important;
+}
