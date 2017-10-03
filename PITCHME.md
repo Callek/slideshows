@@ -10,7 +10,7 @@
 
  - What are the stages of taskgraph generation
    - and how can you test them locally |
- - What are and how do I work with _transforms_ |
+ - What are and how do I work with _transforms_ </li> |
 
 ---
 
@@ -23,40 +23,41 @@
 Suppose you want to make a meal, including baking a cake, so you want to go to
 the grocery store.
 
- - The stores contents, itself, is your 'full' taskgraph. |
- - Your shopping list (including: cake mix) is considered your 'target' tasks |
- - The items you bring up to the register is your 'optimized' task list. |
- - Any substitutions you make at home, would be your final task list ('morphed') |
+ - The stores contents, itself, is your _full_ taskgraph. </li> |
+ - Your shopping list (including: cake mix) is considered your _target_ tasks </li> |
+ - The items you bring up to the register is your _optimized_ task list. </li> |
+ - Any substitutions you make at home, would be your final task list (_morphed_) </li> |
 
 <span class="fragment"><b>Lets go into those in a bit more detail.</b></span>
 
 +++
-#### 'Full' task set:
+#### _Full_ task set:
 
  - In the grocery store, all the items on the shelves are available to buy. |
  - In the taskgraph the full graph is similar |
    - all tasks you could possibly run are generated and represented |
 
-<span class="fragment">The taskgraph fills the shelves in the 'full' stage.</span>
+<span class="fragment">The taskgraph fills the shelves in the _full_ stage.</span>
 
 +++
-#### 'Target' task set:
+#### _Target_ task set:
 
  - You enter the store with a shopping list, knowing that the store sells everything on it. |
    - You walk the aisles and pick up the items on your list. (One of these items is "Cake Mix")
  - Again in the taskgraph, the target set is the tasks you explicitly want to run. |
 
 +++
-#### 'Target' task set:
+#### _Target_ task set:
 
  - The target set must always be a subset of the full taskgraph |
- - The target set may alter based on repo metadata, e.g.: |
-   - Project |
-   - Set of files changed |
-   - If the decision task is run via cron (via target task method) |
+ - The target set may alter based on repo metadata, |
+   - e.g.: |
+     - Project |
+     - Set of files changed |
+     - If the decision task is run via cron (via target task method) |
 
 +++
-#### 'Optimized' task set:
+#### _Optimized_ task set:
 
 - After you grab the cake mix, you look at its ingredients list: |
   - Eggs |
@@ -67,7 +68,7 @@ the grocery store.
 - You think you have buttermilk at home so you don't worry about it. |
 
 +++
-#### 'Optimized' task set:
+#### _Optimized_ task set:
 
 - The optimized task set works similarly. |
   - It will make sure all its dependencies are selected (builds needed for the selected tests get run) |
@@ -82,13 +83,13 @@ Note:
    but you think you have some at home already, so you omit buying it.
 
 +++
-#### 'Morphed' task set:
+#### _Morphed_ task set:
 
-- This is the final set of what will be submitted
-- Morphing consists of minor changes to the structure of the taskgraph that does not alter its actual meaning
-  - Examples include:
-    - When too many index routes are specified to strip them off and submit indexing as a seperate task.
-    - Create a task to store mozharness (via BBB) uploads.
+- This is the final set of what will be submitted |
+- Morphing consists of minor changes to the structure of the taskgraph that does not alter its actual meaning |
+  - Examples include: |
+    - When too many index routes are specified to strip them off and submit indexing as a seperate task. |
+    - Create a task to store mozharness (via BBB) uploads. |
 
 ---
 
@@ -138,7 +139,7 @@ Sub Commands:
   test-action-callback  Run an action callback in a testing mode
 ```
 @[1](Call mach taskgraph)
-@[23,32,33,34,35](We're only using a few sub-tasks for our testing here)
+@[23,32-35](We're only using a few sub-tasks for our testing here)
 @[32](full)
 @[35](target)
 @[34](optimized)
@@ -190,7 +191,7 @@ $ ./mach taskgraph morphed --help
 @[1](Help output for the full graph)
 @[24-26](Parameters file, can be grabbed from an existing decision task)
 @[29](all subtasks mentioned here have a json option, to get the finer details of the state of the taskgraph)
-@[34-37](Replace 'full' with another graph step discussed to test other parts)
+@[34-37](Replace _full_ with another graph step discussed to test other parts)
 
 ---
 
@@ -337,8 +338,8 @@ $ jq '{"dependencies": .["build-signing-win64/opt"]["dependencies"]}' < ../tasks
   }
 }
 ```
-@[0](In this example 'build-win64/opt' is a dependency)
-@[0](We'll talk about what the key, 'build', can be used for, next)
+@[0](In this example _build-win64/opt_ is a dependency)
+@[0](We'll talk about what the key, _build_, can be used for, next)
 
 +++
 
@@ -346,7 +347,7 @@ $ jq '{"dependencies": .["build-signing-win64/opt"]["dependencies"]}' < ../tasks
 
 - In the taskgraph, there is sometimes the need to reference a previously run task by taskID |
   - E.g. to give an artifact URL in the environment |
-- This magic syntax is used by the magic dictionary ```{"task-reference": "some string <key>"}``` |
+- This magic syntax is used by the magic dictionary ```{"task-reference": "some string <key>"}``` </li> |
   - The key here corresponds to the key used in the dependency, and can appear anywhere in the string. |
 
 +++
@@ -373,7 +374,7 @@ $ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "t
 ```
 @[0](This is a minimized look at the full output of the nightly-l10n-win64-nightly-1/opt task)
 @[0](Showing both the dependencies and one specific environment var using the task-reference information)
-@[11-13](This task-reference is using the dependency key 'signed-build')
+@[11-13](This task-reference is using the dependency key _signed-build_)
 @[12](These keys against the dependency list get validated in the optimized stage, along with the labels used in task dependencies)
 @[12](This could evaluate to 'https://queue.taskcluster.net/v1/task/GT4uxctWTDqtYpUrK7CLrA/artifacts/public/build')
 
@@ -386,3 +387,8 @@ $ jq '{"dependencies": .["nightly-l10n-win64-nightly-1/opt"]["dependencies"], "t
   - print debugging |
   - Repeated runs with output directed somewhere. |
   - Many more options |
+
+---
+
+## Q&A
+### http://bit.ly/...
