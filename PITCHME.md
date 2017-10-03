@@ -25,14 +25,14 @@ the grocery store.
 
  - The stores contents, itself, is your 'full' taskgraph. |
  - Your shopping list (including: cake mix) is considered your 'target' tasks |
- - The items you bring up to the register is your *optimized* task list. |
+ - The items you bring up to the register is your 'optimized' task list. |
  - Any substitutions you make at home, would be your final task list ('morphed') |
 
-Lets go into those in a bit more detail.
+*Lets go into those in a bit more detail.*
 
 +++
 
-*Full* task set:
+'Full* task set:
 
  - In the grocery store you have available to you everything you are able to buy. |
  - In the taskgraph the full graph is similar, where all tasks you could possibly run are generated and represented at the end of this stage. |
