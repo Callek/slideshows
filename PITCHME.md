@@ -18,9 +18,12 @@
 
 ## What we will cover
 
- - What are the stages of taskgraph generation
-   - and how can you test them locally |
+ - Taskgraph Generation
+   - Locally Run that generation |
+ - How the _full_ graph is generated </li> |
  - What are and how do I work with _transforms_ </li> |
+ - Some thoughts on debugging locally |
+ - Wrapping up with a Q&A |
 
 ---
 
@@ -205,7 +208,7 @@ $ ./mach taskgraph morphed --help
 
 ---
 
-### Taskgraph Generation
+### Full Graph Generation
 
 +++
 
@@ -260,9 +263,9 @@ jobs-from:
 
 ##### Notes about loaders
 
-- _kind-dependencies_ only determine the order of the kinds loading. |
+- _kind-dependencies_ only determine the order of the kinds loading. </li> |
   - Has no direct bearing on the task dependencies generated. |
-- transforms evaluate one at a time, in order, based on the configuration supplied by the _kind.yml_ with inputs from the loader function |
+- transforms evaluate one at a time, in order, based on the configuration supplied by the _kind.yml_ with inputs from the loader function </li> |
 - before the loader for the next kind being loaded is called, all tasks for the prior kinds are defined in the full graph |
 
 ---
